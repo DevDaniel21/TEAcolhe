@@ -176,7 +176,7 @@ ion-icon {
     justify-content: center;
 }
 
-.oque-tea > .container {
+.oque-tea > .conteudo-card {
     background-color: var(--azul2);
     width: 1400px;
     height: auto;
@@ -195,7 +195,6 @@ ion-icon {
 
 .card-item {
     width: 384px;
-    height: 517px;
     text-align: center;
     background-color: var(--amarelo);
     border-radius: 21px;
@@ -226,7 +225,7 @@ ion-icon {
     align-items: center;
 }
 
-.convivendo-tea > .container {
+.convivendo-tea > .conteudo-card {
     background-color: var(--vermelho);
     width: 1400px;
     height: auto;
@@ -247,7 +246,7 @@ ion-icon {
     align-items: center;
 }
 
-.recursos-tea > .container {
+.recursos-tea > .conteudo-card {
     background-color: var(--azul2);
     width: 1400px;
     height: auto;
@@ -281,4 +280,64 @@ footer {
 
 .redes-sociais {
     display: flex;
+}
+/* ARTIGOS GERAL */
+
+.article-p { 
+    text-align: justify;
+    padding: 10px;
+}
+
+.article-topic {
+    padding: 15px;
+    font-size: var(--fs-18);
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-600);
+}
+
+.article-list {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* ARTIGOS AMARELO E VERMELHO */
+
+.article-container {
+    margin-top: 140px;
+    background-color: #FFDE59;
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: var(--branco);
+    background-color:#FF3131;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ARTIGOS AZUL */
+
+.article-container2 {
+    margin-top: 140px;
+    background-color: #4AC6F3;
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-title2 {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: var(--branco);
+    background-color: #319BFF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 480px) {
+
 }
