@@ -129,6 +129,10 @@ ion-icon {
 .paleta:is(:hover, :focus) {
     color: var(--azul2);
 }
+
+.menu {
+    display: none;
+}
 /* Banner */
 .banner {
     height: 700px;
@@ -167,34 +171,43 @@ ion-icon {
 }
 
 /* OQUE É O TEA */
-.oque-tea {
-    background-color: var(--azul);
-    height: 800px;
+
+.cards-section {
     width: 100%;
+    padding: 40px 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.oque-tea > .conteudo-card {
+.conteudo-card {
     background-color: var(--azul2);
-    width: 1400px;
     height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 20px 60px;
     border-radius: 21px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.oque-tea {
+    background-color: var(--azul);
+}
+
+.oque-tittle {
+    color: white;
+    font-size: var(--fs-40);
 }
 
 .card-list {
     padding-top: 38px;
     display: flex;
     justify-content: space-evenly;
+    gap: 16px;
 }
 
 .card-item {
-    width: 384px;
+    max-width: 384px;
     text-align: center;
     background-color: var(--amarelo);
     border-radius: 21px;
@@ -210,51 +223,23 @@ ion-icon {
     color: var(--vermelho);
 }
 
-.oque-tittle {
-    color: white;
-    font-size: var(--fs-40);
-}
 
 /* CONVIVENDO */
 .convivendo-tea {
     background-color: var(--amarelo);
-    height: 800px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .convivendo-tea > .conteudo-card {
     background-color: var(--vermelho);
-    width: 1400px;
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 21px;
 }
 
 /* RECURSOS E SUPORTE */
 .recursos-tea {
     background-color: var(--azul);
-    height: 800px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .recursos-tea > .conteudo-card {
     background-color: var(--azul2);
-    width: 1400px;
-    height: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border-radius: 21px;
 }
 
 /* FOOTER */
@@ -339,5 +324,52 @@ footer {
 
 /* RESPONSIVIDADE */
 @media screen and (max-width: 480px) {
+    :root {
+        --fs-40: 2.125rem; 
+        --fs-24: 1rem;
+    }
 
+    .oque-tittle {
+        text-align: center;
+        text-wrap: wrap;
+        min-width: 429px;
+    }
+
+    .header-bottom-list {
+        display: none;
+    }
+
+    .conteudo-card {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paleta {
+        display: none;
+    }
+
+    .banner {
+        height: auto;
+        padding: 250px 0;
+    }
+
+    .banner-tittle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: var(--fs-40);
+    color: var(--branco);
+    z-index: 0;
+}
+
+    .banner-content {
+        display: none;
+    }
 }
