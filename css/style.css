@@ -223,6 +223,12 @@ ion-icon {
     color: var(--vermelho);
 }
 
+.img-card {
+    width: 384px;
+    height: 357.44px;
+    border-radius: 21px 21px 0 0;
+    object-fit: cover;
+}
 
 /* CONVIVENDO */
 .convivendo-tea {

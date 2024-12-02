@@ -1,0 +1,319 @@
+:root {
+    /* Color */
+    --branco: #ffffff;
+    -preto: #000000;
+    --azul: #4AC6F3;
+    --azul2: #319BFF;
+    --azul3: #3B92E4;
+    --vermelho: #FF3131;
+    --amarelo: #FFDE59;
+    --verde: #7ED957;
+    
+    /* Tipografia */
+    /* ff font family */
+    --ff-poppins: "Poppins", sans-serif;
+
+    /* fs font size */
+    --fs-40: 2.5rem; /*4x16*/
+    --fs-34: 2.125rem;
+    --fs-24: 1.5rem;
+    --fs-18: 1.125rem;
+    --fs-16: 1rem;
+    --fs-14: 0.875rem;
+
+    /* fw font weight */
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+}
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a,
+img,
+span,
+data,
+input,
+button,
+textarea,
+ion-icon {
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+}
+
+input,
+select,
+textarea {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-poppins);
+}
+
+ion-icon {
+    font-size: 32px;
+}
+
+/* Header */
+.header-bottom {
+    height: 119px;
+    width: 100%;
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+.header-bottom-img {    
+    height: 46px;
+}
+
+.header-bottom-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-bottom-item {
+    font-size: var(--fs-16);
+    font-weight: var(--fw-600);
+}
+
+.header-bottom-item:is(:hover, :focus){
+    color: var(--azul2);
+}
+
+.paleta {
+    background-color: white;
+    border: none;
+}
+
+.paleta:is(:hover, :focus) {
+    color: var(--azul2);
+}
+/* Banner */
+.banner {
+    height: 700px;
+    width: 100%;
+    margin-top: 119px;
+    color: black;
+    text-align: center;
+    background-image: url(../img/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.banner-tittle {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: var(--fs-40);
+    color: var(--branco);
+    z-index: 0;
+}
+
+
+.banner-content {
+    position: absolute;
+    text-align: center;
+    font-weight: 400;
+    left: 50%;
+    top: calc(40% + 60px);
+    transform: translateX(-50%);
+    font-size: var(--fs-24);
+    color: var(--branco);
+}
+
+/* OQUE É O TEA */
+.oque-tea {
+    background-color: var(--azul);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oque-tea > .container {
+    background-color: var(--azul2);
+    width: 1400px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 21px;
+}
+
+.card-list {
+    padding-top: 38px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-item {
+    width: 384px;
+    height: 517px;
+    text-align: center;
+    background-color: var(--amarelo);
+    border-radius: 21px;
+}
+
+.card-link {
+    margin-bottom: 0px;
+    color: black;
+    font-weight: var(--fw-800);
+}
+
+.card-link:is(:hover, :focus) {
+    color: var(--vermelho);
+}
+
+.oque-tittle {
+    color: white;
+    font-size: var(--fs-40);
+}
+
+/* CONVIVENDO */
+.convivendo-tea {
+    background-color: var(--amarelo);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.convivendo-tea > .container {
+    background-color: var(--vermelho);
+    width: 1400px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 21px;
+}
+
+/* RECURSOS E SUPORTE */
+.recursos-tea {
+    background-color: var(--azul);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recursos-tea > .container {
+    background-color: var(--azul2);
+    width: 1400px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 21px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
+
+.footer-top {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.redes-sociais {
+    text-align: center;
+    list-style: none;
+    gap: 21px;
+}
+
+.redes-sociais {
+    display: flex;
+}
+
+/* ARTIGOS */
+
+.article-container {
+    margin-top: 140px;
+    background-color: #4AC6F3;
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: var(--branco);
+    background-color:#319BFF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.article-p { 
+    text-align: justify;
+    padding: 10px;
+}
+
+.article-topic {
+    padding: 15px;
+    font-size: var(--fs-18);
+    font-family: var(--ff-poppins);
+    font-weight: var(--fw-600);
+}
+
+.article-list {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
