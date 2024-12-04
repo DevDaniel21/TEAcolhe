@@ -82,6 +82,7 @@ button {
 
 html {
     font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
 }
 
 ion-icon {
@@ -89,51 +90,45 @@ ion-icon {
 }
 
 /* Header */
-.header-bottom {
-    height: 119px;
-    width: 100%;
-    background-color: var(--branco);
+.header {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    top: 0;
-    position: fixed;
-    z-index: 1;
+    justify-content: space-between;
+    background: var(--branco);
+    height: 4.6875rem;
+    padding: 1rem 3rem;
 }
 
-.header-bottom-img {    
-    height: 46px;
+.logo img {
+    height: 36px;
 }
 
-.header-bottom-list {
-    display: flex;
+.menu {
     list-style: none;
-    align-items: center;
-    gap: 40px;
+    display: flex;
+    gap: 0.5rem;
 }
 
-.header-bottom-item {
-    font-size: var(--fs-16);
-    font-weight: var(--fw-600);
+.menu a {
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: var(--preto);
 }
 
-.header-bottom-item:is(:hover, :focus){
-    color: var(--azul2);
+.menu a:hover {
+    background: var(--azul);
+    color: var(--branco);
 }
 
-.paleta {
-    background-color: white;
-    border: none;
-}
-
-.paleta:is(:hover, :focus) {
-    color: var(--azul2);
+.label-menu,
+.checkbox {
+    display: none;
 }
 /* Banner */
 .banner {
     height: 700px;
     width: 100%;
-    margin-top: 119px;
     color: black;
     text-align: center;
     background-image: url(../img/banner.png);
@@ -286,7 +281,6 @@ footer {
 /* ARTIGOS */
 
 .article-container {
-    margin-top: 140px;
     background-color: #4AC6F3;
     padding: 40px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -316,4 +310,129 @@ footer {
 .article-list {
     margin-left: 30px;
     margin-bottom: 10px;
+}
+
+.btn-top {
+    position: fixed;
+    right: 41px;
+    bottom: 41px;
+    padding: 6px;
+    border-radius: 8px;
+    color: var(--azul3);
+    border: 2px solid var(--azul3);
+    background: var(--branco);
+    transition: 0.25s ease;
+}
+
+@media screen and (max-width: 804px) {
+    .menu {
+        display: block;
+        position: absolute;
+        top: 4.6875rem;
+        left: 0;
+        background: var(--branco);
+        text-align: center;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
+
+    .menu a {
+        padding: 1rem 0;
+        margin-inline: 1rem;
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+        border-radius: 0;
+    }
+
+    .label-menu {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--branco);
+        padding-block: 1rem;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        border-top: 0.125rem solid black;
+        width: 1.25rem;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: black;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .checkbox:checked ~ .menu {
+        height: calc(100vh - 4.6875rem);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger {
+        border-top-color: transparent;
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    .checkbox:checked ~ .label-menu .hamburger::after {
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
+
+:root {
+    --fs-40: 2.125rem; 
+    --fs-24: 1rem;
+}
+
+.oque-tittle {
+    text-align: center;
+    text-wrap: wrap;
+    min-width: 429px;
+}
+
+.conteudo-card {
+    background-color: var(--azul2);
+    padding: 20px 0;
+}
+
+.card-list {
+    align-items: center;
+}
+
+.banner {
+    height: auto;
+    padding: 250px 0;
+}
+
+.banner-tittle {
+text-align: center;
+font-size: var(--fs-40);
+color: var(--branco);
+z-index: 0;
+}
+
+.banner-content {
+    display: none;
+}
+
+.article-container {
+    height: auto;
+}
+
+.article-container2 {
+    height: auto;
+}
 }
